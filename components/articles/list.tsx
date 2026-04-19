@@ -15,6 +15,17 @@ type Article = {
 
 const ARTICLES: Article[] = [
   {
+    n: '06',
+    date: 'Fwd:CloudSec',
+    readTime: 'YouTube',
+    category: 'AuthZ',
+    title: 'Data access controls at Google.',
+    excerpt:
+      'A Fwd:CloudSec presentation on how data access controls work inside Google, with a fairly unapologetic amount of systems-level nerding out.',
+    link: 'https://www.youtube.com/watch?v=s6TYbNrmjtY',
+    external: true,
+  },
+  {
     n: '05',
     date: 'Mar 2026',
     readTime: 'LinkedIn',
@@ -85,7 +96,7 @@ export function ArticleList() {
       <div className="border-t border-ink-rule/60">
         <div className="flex items-baseline justify-between py-5 border-b border-ink-softrule">
           <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink-faint">
-            § Selected writing &amp; publications
+            § Selected writing, talks &amp; publications
           </p>
           <div className="hidden sm:flex items-center gap-4 text-[11px] font-mono uppercase tracking-[0.16em] text-ink-faint">
             <span>Most recent ↓</span>
