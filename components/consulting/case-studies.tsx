@@ -1,31 +1,40 @@
-import { Reveal } from '@/components/reveal'
+import { Reveal } from "@/components/reveal";
 
 const cases = [
   {
-    client: 'Regulated-industry SaaS',
-    problem: 'Zero-trust authorization stalled at scale — policy latency made every request a liability.',
-    approach: 'Re-shaped evaluation as path-aware, with attribute inputs resolved at the edge and a tiered cache for device and location signals.',
-    result: 'Policy evaluation under 50ms at p99. Audit coverage held. Compliance team stopped blocking launches.',
-    tags: ['AuthZ', 'Zero Trust'],
-    duration: '6 weeks',
+    client: "Regulated-industry SaaS",
+    problem:
+      "Zero-trust authorization stalled at scale — policy latency made every request a liability.",
+    approach:
+      "Re-shaped evaluation as path-aware, with attribute inputs resolved at the edge and a tiered cache for device and location signals.",
+    result:
+      "Policy evaluation under 50ms at p99. Audit coverage held. Compliance team stopped blocking launches.",
+    tags: ["AuthZ", "Zero Trust"],
+    duration: "6 weeks",
   },
   {
-    client: 'Large-enterprise infra org',
-    problem: 'Service-mesh rollout stalled, with teams afraid of the blast radius.',
-    approach: 'Per-namespace opt-in, explicit circuit-breakers and escape hatches, and a runbook teams could actually follow.',
-    result: 'Adoption resumed without a single customer-visible incident. On-call stopped losing sleep.',
-    tags: ['Service Mesh', 'SRE'],
-    duration: '8 weeks',
+    client: "Legal + finance org",
+    problem:
+      "High-value research was slow, manual, and too expensive to repeat reliably.",
+    approach:
+      "Built grounded AI research workflows with clear review checkpoints, source capture, and failure boundaries that made the output auditable.",
+    result:
+      "Turnaround dropped from days to minutes, replacing expensive manual research loops with agentic systems people would actually use.",
+    tags: ["AI Eng", "Reliability"],
+    duration: "8 weeks",
   },
   {
-    client: 'AI-native startup',
-    problem: 'Agentic system worked in demo, drifted in prod; no way to measure the drift.',
-    approach: 'Built a repo-grounded eval harness (see RepoGauge), wired evals into CI, and defined the authorization boundaries the agents had to respect.',
-    result: 'Regression caught in PR rather than from customers. Agent cost per task down 35%. Trust, slowly, restored.',
-    tags: ['AI Eng.', 'Evals'],
-    duration: '4 weeks',
+    client: "AI-native startup",
+    problem:
+      "Agentic system worked in demo, drifted in prod; no way to measure the drift.",
+    approach:
+      "Built a repo-grounded eval harness (see RepoGauge), wired evals into CI, and defined the authorization boundaries the agents had to respect.",
+    result:
+      "Regression caught in PR rather than from customers. Agent cost per task down 35%. Trust, slowly, restored.",
+    tags: ["AI Eng.", "Evals"],
+    duration: "4 weeks",
   },
-]
+];
 
 export function CaseStudies() {
   return (
@@ -43,8 +52,8 @@ export function CaseStudies() {
               The shape of the <span className="italic">work</span>.
             </h2>
             <p className="mt-5 max-w-[56ch] text-ink-muted text-[17px]">
-              A few representative engagements drawn from years on Access
-              SRE. Companies anonymised, details adjusted, shape preserved.
+              A few representative engagements drawn from years on Access SRE.
+              Companies anonymised, details adjusted, shape preserved.
             </p>
           </div>
         </div>
@@ -58,7 +67,7 @@ export function CaseStudies() {
               >
                 <div className="col-span-12 md:col-span-3 lg:col-span-2">
                   <p className="font-mono text-[11px] tabular text-oxblood">
-                    Case {String(i + 1).padStart(2, '0')}
+                    Case {String(i + 1).padStart(2, "0")}
                   </p>
                   <p className="mt-2 font-display italic text-[18px] leading-tight">
                     {c.client}
@@ -107,5 +116,5 @@ export function CaseStudies() {
         </Reveal>
       </div>
     </section>
-  )
+  );
 }
