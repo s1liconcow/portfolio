@@ -21,18 +21,15 @@ export default function AboutPage() {
         }
         subtitle={
           <>
-            Engineer, manager, dad, builder. Spent the last stretch as Tech
-            Lead on Access SRE at Google, running the authorization and
-            data-governance systems behind how Googlers reach internal
-            applications. Chapter author of The Site Reliability Workbook.
-            Now independent and building at the intersection of AI and
-            infrastructure.
+            Engineer, manager, dad, builder. Spent the last stretch a Staff Engineer and Uber Tech
+            Lead at Google.  Chapter author of The Site Reliability Workbook and Building Secure and Reliable Systems.
+            Now independent and exploring how to make autonmous agentic engineering reliable.
           </>
         }
         meta={[
           { label: 'Based in', value: 'Los Angeles' },
           { label: 'Status', value: 'Independent · 2026' },
-          { label: 'From', value: 'Google · UCSC ’08' },
+          { label: 'From', value: 'Google - 2017' },
           { label: 'Focus', value: 'AuthZ · AI · SRE' },
         ]}
       />
@@ -43,7 +40,7 @@ export default function AboutPage() {
           <Reveal className="col-span-12 md:col-span-5 lg:col-span-5 relative">
             <Portrait />
             <p className="caption mt-4 flex items-baseline justify-between">
-              <span>Fig. 1 — The author, circa now</span>
+              <span>Fig. 1 — The author, off the clock</span>
               <span>© DC</span>
             </p>
           </Reveal>
@@ -167,7 +164,7 @@ export default function AboutPage() {
               ],
               [
                 'Technology agnostic.',
-                'I’ve seen pretty bad code in every language. The true test is whether you can confidently ship without regressions.',
+                'I’ve seen pretty bad code in every language. Velocity and confidently shipping without regressions matters more than frameworks and languages.',
               ],
               [
                 'Respect the on-call.',

@@ -5,7 +5,7 @@ distributed systems, reliability, and AI.
 
 ## Stack
 
-- **Next.js 15** (App Router) · React 19 · TypeScript
+- **Next.js 16** (App Router, static export) · React 19 · TypeScript
 - **Tailwind CSS 3** with a hand-tuned editorial design system
 - **Motion** (framer-motion successor) for reveals & page animation
 - **next/font** for variable Fraunces, Geist, and JetBrains Mono
@@ -15,9 +15,14 @@ distributed systems, reliability, and AI.
 ```bash
 npm install
 npm run dev      # http://localhost:3000
-npm run build
-npm run start
+npm run build    # writes the static site to out/
+npm run preview  # serves out/ at http://localhost:3000
 ```
+
+## Deploy
+
+Run `npm run build` and publish the contents of `out/` to any static host.
+This project does not require a Next.js server at runtime.
 
 ## Layout
 
@@ -49,8 +54,8 @@ components/
 - **Personal details** — search for `Challoner` / `David` / `hello@challoner.dev`
   across `components/` and `app/`.
 - **Portrait** — `components/about/portrait.tsx`. Replace the SVG placeholder
-  with a real `<Image src="/david.jpg" … />` when ready. Drop the file into
-  `public/`.
+  with a real `<img src="/david.jpg" … />` when ready. Drop the file into
+  `public/` so it ships with the static export.
 - **CV** — `components/about/cv.tsx`. Experience, education, speaking.
 - **Projects & articles** — `components/projects/list.tsx` and
   `components/articles/list.tsx`. Data is inline; move to `content/` when
