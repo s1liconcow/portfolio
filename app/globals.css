@@ -31,7 +31,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    font-feature-settings: 'ss01', 'ss02', 'kern';
+    font-feature-settings: "ss01", "ss02", "kern";
     scroll-behavior: smooth;
   }
 
@@ -41,7 +41,7 @@
     font-family: var(--font-sans);
     font-size: 15px;
     line-height: 1.55;
-    font-variation-settings: 'opsz' 14;
+    font-variation-settings: "opsz" 14;
     overflow-x: hidden;
   }
 
@@ -52,13 +52,22 @@
 
   /* Fraunces tuning */
   .font-display {
-    font-variation-settings: 'opsz' 144, 'SOFT' 30, 'WONK' 0;
+    font-variation-settings:
+      "opsz" 144,
+      "SOFT" 30,
+      "WONK" 0;
   }
   .font-display-wonk {
-    font-variation-settings: 'opsz' 144, 'SOFT' 60, 'WONK' 1;
+    font-variation-settings:
+      "opsz" 144,
+      "SOFT" 60,
+      "WONK" 1;
   }
   .italic.font-display {
-    font-variation-settings: 'opsz' 144, 'SOFT' 60, 'WONK' 1;
+    font-variation-settings:
+      "opsz" 144,
+      "SOFT" 60,
+      "WONK" 1;
   }
 
   /* Typographic baseline */
@@ -117,7 +126,10 @@
   float: left;
   padding: 0.08em 0.08em 0 0;
   color: var(--oxblood);
-  font-variation-settings: 'opsz' 144, 'SOFT' 100, 'WONK' 1;
+  font-variation-settings:
+    "opsz" 144,
+    "SOFT" 100,
+    "WONK" 1;
 }
 
 /* Link with draw-in underline */
@@ -128,7 +140,7 @@
   transition: color 0.3s var(--ease-out);
 }
 .link-draw::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   right: 0;
@@ -186,7 +198,7 @@
 
 /* Grain overlay */
 .grain::after {
-  content: '';
+  content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
@@ -198,7 +210,7 @@
 
 /* Paper fibers (more subtle, layered) */
 .fibers::before {
-  content: '';
+  content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
@@ -216,7 +228,7 @@
 }
 .reg-mark::before,
 .reg-mark::after {
-  content: '';
+  content: "";
   position: absolute;
   background: var(--ink-faint);
 }
@@ -264,7 +276,8 @@
 .card {
   background: var(--paper-light);
   border: 1px solid var(--softrule);
-  transition: border-color 0.35s var(--ease-out),
+  transition:
+    border-color 0.35s var(--ease-out),
     transform 0.5s var(--ease-out);
 }
 .card:hover {

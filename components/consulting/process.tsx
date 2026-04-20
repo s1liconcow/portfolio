@@ -1,33 +1,33 @@
-'use client'
+"use client";
 
-import { motion } from 'motion/react'
+import { motion } from "motion/react";
 
 const steps = [
   {
-    n: 'I',
-    title: 'Listen',
-    duration: '30 min',
-    body: 'A free call. You describe the problem; I ask a lot of questions. We both leave with a clearer picture of whether I’m useful.',
+    n: "I",
+    title: "Listen",
+    duration: "30 min",
+    body: "A free call. You describe the problem; I ask a lot of questions. We both leave with a clearer picture of whether I’m useful.",
   },
   {
-    n: 'II',
-    title: 'Scope',
-    duration: '1 week',
-    body: 'A short written proposal: the problem as I understand it, the proposed engagement shape, deliverables, and a fixed price.',
+    n: "II",
+    title: "Scope",
+    duration: "1 week",
+    body: "A short written proposal: the problem as I understand it, the proposed engagement shape, deliverables, and a fixed price.",
   },
   {
-    n: 'III',
-    title: 'Dive',
-    duration: '2–6 weeks',
-    body: 'I work alongside your team — reading code, instrumenting systems, joining standups, writing design docs, shipping fixes.',
+    n: "III",
+    title: "Dive",
+    duration: "2–6 weeks",
+    body: "I work alongside your team — reading code, instrumenting systems, joining standups, writing design docs, shipping fixes.",
   },
   {
-    n: 'IV',
-    title: 'Hand-off',
-    duration: '1 week',
-    body: 'A durable artifact: a memo, a working system, a hiring brief, a playbook. The goal is that you don’t need me after I leave.',
+    n: "IV",
+    title: "Hand-off",
+    duration: "1 week",
+    body: "A durable artifact: a memo, a working system, a hiring brief, a playbook. The goal is that you don’t need me after I leave.",
   },
-]
+];
 
 export function Process() {
   return (
@@ -67,15 +67,17 @@ export function Process() {
                 key={s.n}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-60px' }}
-                transition={{ duration: 0.8, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{
+                  duration: 0.8,
+                  delay: i * 0.1,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
                 className="relative bg-paper md:bg-paper-light p-0 md:p-8"
               >
                 <div className="flex items-center gap-3 mb-5">
                   <span className="relative flex items-center justify-center w-9 h-9 border border-ink bg-paper-light">
-                    <span className="font-mono text-[11px] tabular">
-                      {s.n}
-                    </span>
+                    <span className="font-mono text-[11px] tabular">{s.n}</span>
                   </span>
                   <span className="font-mono text-[10.5px] uppercase tracking-[0.16em] text-ink-faint tabular">
                     {s.duration}
@@ -93,5 +95,5 @@ export function Process() {
         </div>
       </div>
     </section>
-  )
+  );
 }

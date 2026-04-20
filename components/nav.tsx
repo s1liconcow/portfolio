@@ -1,41 +1,41 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { useEffect, useState } from 'react'
-import { cn } from '@/lib/cn'
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import { cn } from "@/lib/cn";
 
 const LINKS = [
-  { href: '/', label: 'Index', n: 'I' },
-  { href: '/about', label: 'About', n: 'II' },
-  { href: '/consulting', label: 'Consulting', n: 'III' },
-  { href: '/projects', label: 'Projects', n: 'IV' },
-  { href: '/articles', label: 'Articles', n: 'V' },
-]
+  { href: "/", label: "Index", n: "I" },
+  { href: "/about", label: "About", n: "II" },
+  { href: "/consulting", label: "Consulting", n: "III" },
+  { href: "/projects", label: "Projects", n: "IV" },
+  { href: "/articles", label: "Articles", n: "V" },
+];
 
 export function Nav() {
-  const pathname = usePathname()
-  const [scrolled, setScrolled] = useState(false)
-  const [open, setOpen] = useState(false)
+  const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12)
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
-    setOpen(false)
-  }, [pathname])
+    setOpen(false);
+  }, [pathname]);
 
   return (
     <header
       className={cn(
-        'sticky top-0 z-50 transition-all duration-500',
+        "sticky top-0 z-50 transition-all duration-500",
         scrolled
-          ? 'backdrop-blur-md bg-paper/70 border-b border-ink-rule/50'
-          : 'bg-transparent'
+          ? "backdrop-blur-md bg-paper/70 border-b border-ink-rule/50"
+          : "bg-transparent",
       )}
     >
       {/* Folio micro-row */}
@@ -64,16 +64,14 @@ export function Nav() {
         <nav className="hidden md:flex items-center gap-1">
           {LINKS.map((l) => {
             const active =
-              l.href === '/'
-                ? pathname === '/'
-                : pathname.startsWith(l.href)
+              l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
             return (
               <Link
                 key={l.href}
                 href={l.href}
                 className={cn(
-                  'group relative px-3 py-1.5 text-[13.5px] transition-colors duration-300',
-                  active ? 'text-ink' : 'text-ink-muted hover:text-ink'
+                  "group relative px-3 py-1.5 text-[13.5px] transition-colors duration-300",
+                  active ? "text-ink" : "text-ink-muted hover:text-ink",
                 )}
               >
                 <span className="font-mono text-[10px] text-ink-faint mr-1.5 tabular">
@@ -82,12 +80,14 @@ export function Nav() {
                 {l.label}
                 <span
                   className={cn(
-                    'absolute left-3 right-3 bottom-0.5 h-px origin-left bg-oxblood transition-transform duration-500',
-                    active ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                    "absolute left-3 right-3 bottom-0.5 h-px origin-left bg-oxblood transition-transform duration-500",
+                    active
+                      ? "scale-x-100"
+                      : "scale-x-0 group-hover:scale-x-100",
                   )}
                 />
               </Link>
-            )
+            );
           })}
           <a
             href="mailto:hello@challoner.dev"
@@ -104,20 +104,20 @@ export function Nav() {
         >
           <span
             className={cn(
-              'absolute w-4 h-px bg-ink transition-transform duration-300',
-              open ? 'rotate-45' : '-translate-y-1'
+              "absolute w-4 h-px bg-ink transition-transform duration-300",
+              open ? "rotate-45" : "-translate-y-1",
             )}
           />
           <span
             className={cn(
-              'absolute w-4 h-px bg-ink transition-all duration-300',
-              open ? 'opacity-0' : 'opacity-100'
+              "absolute w-4 h-px bg-ink transition-all duration-300",
+              open ? "opacity-0" : "opacity-100",
             )}
           />
           <span
             className={cn(
-              'absolute w-4 h-px bg-ink transition-transform duration-300',
-              open ? '-rotate-45' : 'translate-y-1'
+              "absolute w-4 h-px bg-ink transition-transform duration-300",
+              open ? "-rotate-45" : "translate-y-1",
             )}
           />
         </button>
@@ -126,24 +126,22 @@ export function Nav() {
       {/* Mobile nav */}
       <div
         className={cn(
-          'md:hidden edge overflow-hidden transition-all duration-500 ease-out',
-          open ? 'max-h-[500px] pb-6' : 'max-h-0'
+          "md:hidden edge overflow-hidden transition-all duration-500 ease-out",
+          open ? "max-h-[500px] pb-6" : "max-h-0",
         )}
       >
         <div className="rule-soft my-2" />
         <div className="flex flex-col divide-y divide-ink-softrule">
           {LINKS.map((l) => {
             const active =
-              l.href === '/'
-                ? pathname === '/'
-                : pathname.startsWith(l.href)
+              l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
             return (
               <Link
                 key={l.href}
                 href={l.href}
                 className={cn(
-                  'py-3 flex items-baseline gap-3',
-                  active ? 'text-ink' : 'text-ink-muted'
+                  "py-3 flex items-baseline gap-3",
+                  active ? "text-ink" : "text-ink-muted",
                 )}
               >
                 <span className="font-mono text-[10px] text-ink-faint w-4 tabular">
@@ -151,7 +149,7 @@ export function Nav() {
                 </span>
                 <span className="font-display text-xl">{l.label}</span>
               </Link>
-            )
+            );
           })}
           <a
             href="mailto:hello@challoner.dev"
@@ -165,5 +163,5 @@ export function Nav() {
 
       <div className="rule-hair opacity-50" />
     </header>
-  )
+  );
 }

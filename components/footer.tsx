@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import { RegistrationMarks } from './registration-marks'
+import Link from "next/link";
+import { RegistrationMarks } from "./registration-marks";
 
 export function Footer() {
   return (
@@ -91,12 +91,19 @@ export function Footer() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pt-8 text-[11px] font-mono uppercase tracking-[0.14em] text-ink-faint">
           <div className="space-y-1.5">
             <p>
-              <span className="text-ink-muted">© MMXXVI</span> —{' '}
+              <span className="text-ink-muted">© MMXXVI</span> —{" "}
               D.&nbsp;Challoner. All typography &amp; errors my own.
             </p>
             <p>
-              Set in <span className="italic font-display normal-case tracking-normal text-ink">Fraunces</span> &amp;{' '}
-              <span className="font-display normal-case tracking-normal text-ink">Geist</span>. Built with Next.js.
+              Set in{" "}
+              <span className="italic font-display normal-case tracking-normal text-ink">
+                Fraunces
+              </span>{" "}
+              &amp;{" "}
+              <span className="font-display normal-case tracking-normal text-ink">
+                Geist
+              </span>
+              . Built with Next.js.
             </p>
           </div>
           <div className="flex items-center gap-4">
@@ -112,5 +119,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

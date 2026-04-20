@@ -20,15 +20,15 @@ export function ArticleFeatured() {
               Latest — On LinkedIn
             </p>
             <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] leading-[0.95] tracking-tight">
-              Climbing the{' '}
-              <span className="italic text-oxblood">Agentic Coding</span>{' '}
+              Climbing the{" "}
+              <span className="italic text-oxblood">Agentic Coding</span>{" "}
               Ladder.
             </h2>
             <p className="mt-8 max-w-[64ch] text-[18px] text-ink-muted leading-[1.6]">
               A working field guide to the rungs of autonomous coding: what
-              agents can do reliably today, what they can fake, and where
-              the real boundary lives. Drawn from running the benchmarks on
-              my own code — not a curated leaderboard.
+              agents can do reliably today, what they can fake, and where the
+              real boundary lives. Drawn from running the benchmarks on my own
+              code — not a curated leaderboard.
             </p>
 
             <div className="mt-10 flex items-center justify-between pt-6 border-t border-ink-softrule">
@@ -43,5 +43,5 @@ export function ArticleFeatured() {
         </div>
       </a>
     </section>
-  )
+  );
 }

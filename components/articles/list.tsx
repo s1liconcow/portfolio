@@ -1,94 +1,94 @@
-'use client'
+"use client";
 
-import { motion } from 'motion/react'
+import { motion } from "motion/react";
 
 type Article = {
-  n: string
-  date: string
-  readTime: string
-  category: string
-  title: string
-  excerpt: string
-  link: string
-  external?: boolean
-}
+  n: string;
+  date: string;
+  readTime: string;
+  category: string;
+  title: string;
+  excerpt: string;
+  link: string;
+  external?: boolean;
+};
 
 const ARTICLES: Article[] = [
   {
-    n: '06',
-    date: 'Fwd:CloudSec',
-    readTime: 'YouTube',
-    category: 'AuthZ',
-    title: 'Data access controls at Google.',
+    n: "06",
+    date: "Fwd:CloudSec",
+    readTime: "YouTube",
+    category: "AuthZ",
+    title: "Data access controls at Google.",
     excerpt:
-      'A Fwd:CloudSec presentation on how data access controls work inside Google, with a fairly unapologetic amount of systems-level nerding out.',
-    link: 'https://www.youtube.com/watch?v=s6TYbNrmjtY',
+      "A Fwd:CloudSec presentation on how data access controls work inside Google, with a fairly unapologetic amount of systems-level nerding out.",
+    link: "https://www.youtube.com/watch?v=s6TYbNrmjtY",
     external: true,
   },
   {
-    n: '05',
-    date: 'Mar 2026',
-    readTime: 'LinkedIn',
-    category: 'AI Eng.',
-    title: 'Climbing the Agentic Coding Ladder.',
+    n: "05",
+    date: "Mar 2026",
+    readTime: "LinkedIn",
+    category: "AI Eng.",
+    title: "Climbing the Agentic Coding Ladder.",
     excerpt:
-      'A working field guide to autonomous coding: which rungs are reliable today, which are still theatre, and how to tell from your own codebase rather than a curated leaderboard.',
-    link: 'https://www.linkedin.com/in/david-challoner-1b002511/recent-activity/articles/',
+      "A working field guide to autonomous coding: which rungs are reliable today, which are still theatre, and how to tell from your own codebase rather than a curated leaderboard.",
+    link: "https://www.linkedin.com/in/david-challoner-1b002511/recent-activity/articles/",
     external: true,
   },
   {
-    n: '04',
-    date: 'Apr 2024',
-    readTime: 'TDCommons',
-    category: 'AuthZ',
-    title: 'Access Control Based on Entire Request Path.',
+    n: "04",
+    date: "Apr 2024",
+    readTime: "TDCommons",
+    category: "AuthZ",
+    title: "Access Control Based on Entire Request Path.",
     excerpt:
-      'Invention disclosure. Rather than authorizing only source and destination, validate every device a request traverses — so regulated data can’t drift outside permitted regions on the way.',
-    link: 'https://www.tdcommons.org/dpubs_series/6837/',
+      "Invention disclosure. Rather than authorizing only source and destination, validate every device a request traverses — so regulated data can’t drift outside permitted regions on the way.",
+    link: "https://www.tdcommons.org/dpubs_series/6837/",
     external: true,
   },
   {
-    n: '03',
-    date: 'Aug 2022',
-    readTime: 'Google Cloud',
-    category: 'Service Mesh',
-    title: 'Securing apps for Googlers using Anthos Service Mesh.',
+    n: "03",
+    date: "Aug 2022",
+    readTime: "Google Cloud",
+    category: "Service Mesh",
+    title: "Securing apps for Googlers using Anthos Service Mesh.",
     excerpt:
-      'Co-authored with Anthony Bushong. How Access SRE and Corp Eng adopted Anthos Service Mesh to mediate Googler access across trust boundaries, across cloud and on-prem, with consistent policy and minimal ops overhead.',
-    link: 'https://cloud.google.com/blog/topics/developers-practitioners/securing-apps-googlers-using-anthos-service-mesh',
+      "Co-authored with Anthony Bushong. How Access SRE and Corp Eng adopted Anthos Service Mesh to mediate Googler access across trust boundaries, across cloud and on-prem, with consistent policy and minimal ops overhead.",
+    link: "https://cloud.google.com/blog/topics/developers-practitioners/securing-apps-googlers-using-anthos-service-mesh",
     external: true,
   },
   {
-    n: '02',
-    date: '2020',
-    readTime: 'Book — Google',
-    category: 'Security',
-    title: 'Building Secure and Reliable Systems.',
+    n: "02",
+    date: "2020",
+    readTime: "Book — Google",
+    category: "Security",
+    title: "Building Secure and Reliable Systems.",
     excerpt:
-      'Contributing author. Google’s companion volume to the SRE Book, bringing reliability and security into a single coherent discipline.',
-    link: 'https://static.googleusercontent.com/media/sre.google/en//static/pdf/building_secure_and_reliable_systems.pdf',
+      "Contributing author. Google’s companion volume to the SRE Book, bringing reliability and security into a single coherent discipline.",
+    link: "https://static.googleusercontent.com/media/sre.google/en//static/pdf/building_secure_and_reliable_systems.pdf",
     external: true,
   },
   {
-    n: '01',
-    date: '2018',
-    readTime: 'Book — Ch. 6',
-    category: 'SRE',
-    title: 'The Site Reliability Workbook — Eliminating Toil.',
+    n: "01",
+    date: "2018",
+    readTime: "Book — Ch. 6",
+    category: "SRE",
+    title: "The Site Reliability Workbook — Eliminating Toil.",
     excerpt:
-      'Primary author of Chapter 6. A practitioner’s guide to identifying, measuring, and reducing the repetitive operational work that erodes SRE team capacity — and what to do with the capacity you get back.',
-    link: 'https://sre.google/workbook/eliminating-toil/',
+      "Primary author of Chapter 6. A practitioner’s guide to identifying, measuring, and reducing the repetitive operational work that erodes SRE team capacity — and what to do with the capacity you get back.",
+    link: "https://sre.google/workbook/eliminating-toil/",
     external: true,
   },
-]
+];
 
 const categoryColor: Record<string, string> = {
-  'AI Eng.': 'text-oxblood',
-  AuthZ: 'text-oxblood',
-  'Service Mesh': 'text-ink',
-  Security: 'text-ink',
-  SRE: 'text-ink',
-}
+  "AI Eng.": "text-oxblood",
+  AuthZ: "text-oxblood",
+  "Service Mesh": "text-ink",
+  Security: "text-ink",
+  SRE: "text-ink",
+};
 
 export function ArticleList() {
   return (
@@ -108,13 +108,17 @@ export function ArticleList() {
             key={a.n}
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-60px' }}
-            transition={{ duration: 0.7, delay: i * 0.03, ease: [0.22, 1, 0.36, 1] }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{
+              duration: 0.7,
+              delay: i * 0.03,
+              ease: [0.22, 1, 0.36, 1],
+            }}
           >
             <a
               href={a.link}
-              target={a.external ? '_blank' : undefined}
-              rel={a.external ? 'noreferrer' : undefined}
+              target={a.external ? "_blank" : undefined}
+              rel={a.external ? "noreferrer" : undefined}
               className="group grid grid-cols-12 gap-4 md:gap-8 py-8 border-b border-ink-softrule hover:bg-paper-light/60 transition-colors duration-400"
             >
               <div className="col-span-12 md:col-span-2 flex md:flex-col gap-3 md:gap-1 justify-between md:justify-start">
@@ -144,7 +148,7 @@ export function ArticleList() {
               <div className="col-span-12 md:col-span-2 md:text-right">
                 <span
                   className={`font-mono text-[10.5px] uppercase tracking-[0.14em] ${
-                    categoryColor[a.category] || 'text-ink-muted'
+                    categoryColor[a.category] || "text-ink-muted"
                   }`}
                 >
                   {a.category}
@@ -156,7 +160,7 @@ export function ArticleList() {
       </div>
 
       <p className="mt-10 font-mono text-[11px] uppercase tracking-[0.18em] text-ink-faint">
-        More writing lives on{' '}
+        More writing lives on{" "}
         <a
           href="https://www.linkedin.com/in/david-challoner-1b002511/recent-activity/articles/"
           target="_blank"
@@ -168,5 +172,5 @@ export function ArticleList() {
         .
       </p>
     </section>
-  )
+  );
 }

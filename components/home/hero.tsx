@@ -1,19 +1,19 @@
-'use client'
+"use client";
 
-import { motion, useScroll, useTransform } from 'motion/react'
-import Link from 'next/link'
-import { useRef } from 'react'
+import { motion, useScroll, useTransform } from "motion/react";
+import Link from "next/link";
+import { useRef } from "react";
 
-const easeOut = [0.22, 1, 0.36, 1] as const
+const easeOut = [0.22, 1, 0.36, 1] as const;
 
 export function HomeHero() {
-  const ref = useRef<HTMLDivElement>(null)
+  const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['start start', 'end start'],
-  })
-  const y = useTransform(scrollYProgress, [0, 1], [0, -80])
-  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0])
+    offset: ["start start", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], [0, -80]);
+  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
     <section
@@ -26,7 +26,7 @@ export function HomeHero() {
         className="absolute inset-x-0 top-0 bottom-0 pointer-events-none opacity-[0.35]"
         style={{
           backgroundImage:
-            'linear-gradient(to right, transparent calc(50% - .5px), var(--softrule) calc(50% - .5px), var(--softrule) calc(50% + .5px), transparent calc(50% + .5px))',
+            "linear-gradient(to right, transparent calc(50% - .5px), var(--softrule) calc(50% - .5px), var(--softrule) calc(50% + .5px), transparent calc(50% + .5px))",
         }}
       />
 
@@ -68,8 +68,8 @@ export function HomeHero() {
 
           <div className="col-span-12 md:col-span-10 lg:col-span-11 relative">
             <motion.h1
-              initial={{ opacity: 0, y: 28, filter: 'blur(8px)' }}
-              animate={{ opacity: 1, y: 0, filter: 'blur(0)' }}
+              initial={{ opacity: 0, y: 28, filter: "blur(8px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0)" }}
               transition={{ duration: 1.1, delay: 0.25, ease: easeOut }}
               className="font-display leading-[0.82] tracking-[-0.045em] text-[clamp(4.5rem,16vw,16rem)]"
             >
@@ -89,9 +89,8 @@ export function HomeHero() {
                   transition={{ duration: 0.9, delay: 0.7, ease: easeOut }}
                   className="font-display text-[clamp(1.5rem,2.4vw,2.25rem)] leading-[1.2] tracking-tight text-ink max-w-[22ch]"
                 >
-                  Building at the edges of{' '}
-                  <em className="italic">AuthZ</em>,{' '}
-                  <em className="italic">Reliability</em>, and{' '}
+                  Building at the edges of <em className="italic">AuthZ</em>,{" "}
+                  <em className="italic">Reliability</em>, and{" "}
                   <em className="italic">Agentic AI</em>.
                 </motion.p>
               </div>
@@ -168,5 +167,5 @@ export function HomeHero() {
         }
       `}</style>
     </section>
-  )
+  );
 }

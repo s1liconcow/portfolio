@@ -1,15 +1,15 @@
-import { PageHero } from '@/components/page-hero'
-import { Reveal } from '@/components/reveal'
-import { Pillars } from '@/components/consulting/pillars'
-import { EnterpriseRoadmap } from '@/components/consulting/enterprise-roadmap'
-import { Process } from '@/components/consulting/process'
-import { Engagements } from '@/components/consulting/engagements'
-import { CaseStudies } from '@/components/consulting/case-studies'
-import Link from 'next/link'
+import { PageHero } from "@/components/page-hero";
+import { Reveal } from "@/components/reveal";
+import { Pillars } from "@/components/consulting/pillars";
+import { EnterpriseRoadmap } from "@/components/consulting/enterprise-roadmap";
+import { Process } from "@/components/consulting/process";
+import { Engagements } from "@/components/consulting/engagements";
+import { CaseStudies } from "@/components/consulting/case-studies";
+import Link from "next/link";
 
 export const metadata = {
-  title: 'Consulting — David Challoner',
-}
+  title: "Consulting — David Challoner",
+};
 
 export default function ConsultingPage() {
   return (
@@ -28,15 +28,15 @@ export default function ConsultingPage() {
           <>
             I work with a small number of teams each quarter on the
             infrastructure problems that matter most — reliability, scale,
-            platform design, and increasingly, the engineering behind
-            serious AI systems.
+            platform design, and increasingly, the engineering behind serious AI
+            systems.
           </>
         }
         meta={[
-          { label: 'Availability', value: 'Q3 · Q4 2026' },
-          { label: 'Engagement', value: '2–8 weeks' },
-          { label: 'Remote', value: 'EU · US hours' },
-          { label: 'Equity', value: 'Considered' },
+          { label: "Availability", value: "Q3 · Q4 2026" },
+          { label: "Engagement", value: "2–8 weeks" },
+          { label: "Remote", value: "EU · US hours" },
+          { label: "Equity", value: "Considered" },
         ]}
       />
 
@@ -60,11 +60,12 @@ export default function ConsultingPage() {
             />
             <p className="label-accent label mb-6">To begin</p>
             <h2 className="font-display text-[clamp(2.5rem,7vw,6rem)] leading-[0.95] tracking-tight">
-              Tell me what’s <span className="italic text-oxblood">on fire</span>.
+              Tell me what’s{" "}
+              <span className="italic text-oxblood">on fire</span>.
             </h2>
             <p className="mt-6 max-w-[52ch] mx-auto text-[17px] text-ink-muted">
-              A single, honest paragraph is all it takes to start. I read
-              every message, and reply to most within two business days.
+              A single, honest paragraph is all it takes to start. I read every
+              message, and reply to most within two business days.
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <a
@@ -87,5 +88,5 @@ export default function ConsultingPage() {
         </Reveal>
       </section>
     </div>
-  )
+  );
 }

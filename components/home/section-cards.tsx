@@ -1,15 +1,15 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { motion } from 'motion/react'
+import Link from "next/link";
+import { motion } from "motion/react";
 
 const sections = [
   {
-    n: 'II',
-    title: 'About',
-    kicker: 'The dossier',
-    desc: 'Where I came from, what I care about, and a picture that will date.',
-    href: '/about',
+    n: "II",
+    title: "About",
+    kicker: "The dossier",
+    desc: "Where I came from, what I care about, and a picture that will date.",
+    href: "/about",
     glyph: (
       <svg viewBox="0 0 80 80" className="w-full h-full">
         <circle cx="40" cy="28" r="14" stroke="currentColor" fill="none" />
@@ -23,25 +23,32 @@ const sections = [
     ),
   },
   {
-    n: 'III',
-    title: 'Consulting',
-    kicker: 'Work with me',
-    desc: 'Reliability reviews, platform architecture, and AI systems that hold up under traffic.',
-    href: '/consulting',
+    n: "III",
+    title: "Consulting",
+    kicker: "Work with me",
+    desc: "Reliability reviews, platform architecture, and AI systems that hold up under traffic.",
+    href: "/consulting",
     glyph: (
       <svg viewBox="0 0 80 80" className="w-full h-full">
-        <rect x="10" y="10" width="60" height="60" stroke="currentColor" fill="none" />
+        <rect
+          x="10"
+          y="10"
+          width="60"
+          height="60"
+          stroke="currentColor"
+          fill="none"
+        />
         <path d="M10 40 H70 M40 10 V70" stroke="currentColor" />
         <circle cx="40" cy="40" r="6" fill="currentColor" />
       </svg>
     ),
   },
   {
-    n: 'IV',
-    title: 'Projects',
-    kicker: 'What I’ve built',
-    desc: 'Personal infrastructure, tools for teams, and a handful of experiments that escaped.',
-    href: '/projects',
+    n: "IV",
+    title: "Projects",
+    kicker: "What I’ve built",
+    desc: "Personal infrastructure, tools for teams, and a handful of experiments that escaped.",
+    href: "/projects",
     glyph: (
       <svg viewBox="0 0 80 80" className="w-full h-full">
         <path
@@ -49,16 +56,20 @@ const sections = [
           stroke="currentColor"
           fill="none"
         />
-        <path d="M40 10 V70 M10 28 L70 52 M10 52 L70 28" stroke="currentColor" opacity="0.5" />
+        <path
+          d="M40 10 V70 M10 28 L70 52 M10 52 L70 28"
+          stroke="currentColor"
+          opacity="0.5"
+        />
       </svg>
     ),
   },
   {
-    n: 'V',
-    title: 'Articles',
-    kicker: 'Thinking aloud',
-    desc: 'Essays on distributed systems, reliability, and the occasional misadventure.',
-    href: '/articles',
+    n: "V",
+    title: "Articles",
+    kicker: "Thinking aloud",
+    desc: "Essays on distributed systems, reliability, and the occasional misadventure.",
+    href: "/articles",
     glyph: (
       <svg viewBox="0 0 80 80" className="w-full h-full">
         <path
@@ -69,7 +80,7 @@ const sections = [
       </svg>
     ),
   },
-]
+];
 
 export function HomeSectionCards() {
   return (
@@ -89,8 +100,12 @@ export function HomeSectionCards() {
             key={s.title}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-60px' }}
-            transition={{ duration: 0.8, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{
+              duration: 0.8,
+              delay: i * 0.08,
+              ease: [0.22, 1, 0.36, 1],
+            }}
           >
             <Link
               href={s.href}
@@ -130,5 +145,5 @@ export function HomeSectionCards() {
         ))}
       </div>
     </section>
-  )
+  );
 }

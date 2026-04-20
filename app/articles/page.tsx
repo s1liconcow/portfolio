@@ -1,11 +1,11 @@
-import { PageHero } from '@/components/page-hero'
-import { ArticleList } from '@/components/articles/list'
-import { ArticleFeatured } from '@/components/articles/featured'
-import { Reveal } from '@/components/reveal'
+import { PageHero } from "@/components/page-hero";
+import { ArticleList } from "@/components/articles/list";
+import { ArticleFeatured } from "@/components/articles/featured";
+import { Reveal } from "@/components/reveal";
 
 export const metadata = {
-  title: 'Articles — David Challoner',
-}
+  title: "Articles — David Challoner",
+};
 
 export default function ArticlesPage() {
   return (
@@ -22,17 +22,17 @@ export default function ArticlesPage() {
         }
         subtitle={
           <>
-            Essays on distributed systems, reliability, AI infrastructure,
-            and the slower-moving ideas that I come back to again and
-            again. A new piece every two or three weeks — occasionally
-            faster, never on a schedule.
+            Essays on distributed systems, reliability, AI infrastructure, and
+            the slower-moving ideas that I come back to again and again. A new
+            piece every two or three weeks — occasionally faster, never on a
+            schedule.
           </>
         }
         meta={[
-          { label: 'Books', value: '2 · contributor' },
-          { label: 'Essays', value: 'Ad hoc' },
-          { label: 'Patents', value: '1 disclosure' },
-          { label: 'Feed', value: 'LinkedIn · Email' },
+          { label: "Books", value: "2 · contributor" },
+          { label: "Essays", value: "Ad hoc" },
+          { label: "Patents", value: "1 disclosure" },
+          { label: "Feed", value: "LinkedIn · Email" },
         ]}
       />
 
@@ -61,9 +61,9 @@ export default function ArticlesPage() {
               </div>
               <div className="col-span-12 md:col-span-7">
                 <p className="text-[16px] text-ink-muted leading-[1.65]">
-                  New essays in your inbox, lightly annotated with whatever
-                  I happened to be reading that week. No tracking, no
-                  upsells, no drip sequences. Unsubscribe with a thought.
+                  New essays in your inbox, lightly annotated with whatever I
+                  happened to be reading that week. No tracking, no upsells, no
+                  drip sequences. Unsubscribe with a thought.
                 </p>
                 <form className="mt-8 flex flex-col sm:flex-row gap-3">
                   <input
@@ -91,5 +91,5 @@ export default function ArticlesPage() {
         </Reveal>
       </section>
     </div>
-  )
+  );
 }

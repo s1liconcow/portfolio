@@ -1,17 +1,17 @@
-'use client'
+"use client";
 
-import { motion } from 'motion/react'
-import type { ReactNode } from 'react'
-import { cn } from '@/lib/cn'
+import { motion } from "motion/react";
+import type { ReactNode } from "react";
+import { cn } from "@/lib/cn";
 
 type PageHeroProps = {
-  eyebrow: string
-  number: string
-  title: ReactNode
-  subtitle?: ReactNode
-  meta?: { label: string; value: string }[]
-  className?: string
-}
+  eyebrow: string;
+  number: string;
+  title: ReactNode;
+  subtitle?: ReactNode;
+  meta?: { label: string; value: string }[];
+  className?: string;
+};
 
 export function PageHero({
   eyebrow,
@@ -22,7 +22,7 @@ export function PageHero({
   className,
 }: PageHeroProps) {
   return (
-    <section className={cn('relative edge pt-14 md:pt-20 pb-20', className)}>
+    <section className={cn("relative edge pt-14 md:pt-20 pb-20", className)}>
       <div className="grid grid-cols-12 gap-4 md:gap-8">
         <div className="col-span-12 md:col-span-3 lg:col-span-2 space-y-3">
           <motion.p
@@ -49,8 +49,8 @@ export function PageHero({
 
         <div className="col-span-12 md:col-span-9 lg:col-span-10">
           <motion.h1
-            initial={{ opacity: 0, y: 20, filter: 'blur(6px)' }}
-            animate={{ opacity: 1, y: 0, filter: 'blur(0)' }}
+            initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0)" }}
             transition={{
               duration: 1.1,
               delay: 0.15,
@@ -98,5 +98,5 @@ export function PageHero({
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,11 +1,11 @@
-import Link from 'next/link'
-import { Marquee } from '@/components/marquee'
-import { Reveal } from '@/components/reveal'
-import { HomeHero } from '@/components/home/hero'
-import { HomeCurrently } from '@/components/home/currently'
-import { HomeSectionCards } from '@/components/home/section-cards'
-import { HomeFeatured } from '@/components/home/featured'
-import { HomeCTA } from '@/components/home/cta'
+import Link from "next/link";
+import { Marquee } from "@/components/marquee";
+import { Reveal } from "@/components/reveal";
+import { HomeHero } from "@/components/home/hero";
+import { HomeCurrently } from "@/components/home/currently";
+import { HomeSectionCards } from "@/components/home/section-cards";
+import { HomeFeatured } from "@/components/home/featured";
+import { HomeCTA } from "@/components/home/cta";
 
 export default function HomePage() {
   return (
@@ -14,14 +14,14 @@ export default function HomePage() {
 
       <Marquee
         items={[
-          'Distributed Systems',
-          'Service Mesh',
-          'Kubernetes',
-          'Site Reliability',
-          'Platform Engineering',
-          'AI Infrastructure',
-          'Observability',
-          'Developer Tools',
+          "Distributed Systems",
+          "Service Mesh",
+          "Kubernetes",
+          "Site Reliability",
+          "Platform Engineering",
+          "AI Infrastructure",
+          "Observability",
+          "Developer Tools",
         ]}
       />
 
@@ -35,5 +35,5 @@ export default function HomePage() {
 
       <HomeCTA />
     </div>
-  )
+  );
 }

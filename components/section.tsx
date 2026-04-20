@@ -1,15 +1,15 @@
-import { cn } from '@/lib/cn'
-import type { ReactNode } from 'react'
+import { cn } from "@/lib/cn";
+import type { ReactNode } from "react";
 
 type SectionProps = {
-  label?: string
-  number?: string
-  title: ReactNode
-  lede?: ReactNode
-  children?: ReactNode
-  className?: string
-  id?: string
-}
+  label?: string;
+  number?: string;
+  title: ReactNode;
+  lede?: ReactNode;
+  children?: ReactNode;
+  className?: string;
+  id?: string;
+};
 
 export function SectionHeader({
   label,
@@ -18,9 +18,9 @@ export function SectionHeader({
   lede,
   className,
   id,
-}: Omit<SectionProps, 'children'>) {
+}: Omit<SectionProps, "children">) {
   return (
-    <div id={id} className={cn('edge', className)}>
+    <div id={id} className={cn("edge", className)}>
       <div className="grid grid-cols-12 gap-4 md:gap-8 pt-16 pb-10 border-t border-ink-rule/60">
         <div className="col-span-12 md:col-span-3 lg:col-span-2">
           {number && (
@@ -28,9 +28,7 @@ export function SectionHeader({
               §{number}
             </p>
           )}
-          {label && (
-            <p className="label-accent label mt-2">{label}</p>
-          )}
+          {label && <p className="label-accent label mt-2">{label}</p>}
         </div>
         <div className="col-span-12 md:col-span-9 lg:col-span-10">
           <h2 className="font-display text-display-lg tracking-tight">
@@ -44,7 +42,7 @@ export function SectionHeader({
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export function Section({
@@ -57,14 +55,9 @@ export function Section({
   id,
 }: SectionProps) {
   return (
-    <section id={id} className={cn('relative', className)}>
-      <SectionHeader
-        label={label}
-        number={number}
-        title={title}
-        lede={lede}
-      />
+    <section id={id} className={cn("relative", className)}>
+      <SectionHeader label={label} number={number} title={title} lede={lede} />
       <div className="edge">{children}</div>
     </section>
-  )
+  );
 }

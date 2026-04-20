@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 export function HomeCTA() {
   return (
@@ -10,7 +10,7 @@ export function HomeCTA() {
           className="absolute -top-10 -right-10 w-60 h-60 opacity-10"
           style={{
             backgroundImage:
-              'repeating-linear-gradient(-45deg, transparent 0, transparent 6px, #f2ecdb 6px, #f2ecdb 7px)',
+              "repeating-linear-gradient(-45deg, transparent 0, transparent 6px, #f2ecdb 6px, #f2ecdb 7px)",
           }}
         />
 
@@ -32,9 +32,9 @@ export function HomeCTA() {
             </h2>
 
             <p className="mt-6 max-w-[54ch] text-[17px] text-paper/80">
-              I take on a small number of engagements each quarter — usually
-              two to six weeks — with teams who are serious about shipping
-              and honest about where they’re stuck.
+              I take on a small number of engagements each quarter — usually two
+              to six weeks — with teams who are serious about shipping and
+              honest about where they’re stuck.
             </p>
 
             <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -58,5 +58,5 @@ export function HomeCTA() {
         </div>
       </div>
     </section>
-  )
+  );
 }

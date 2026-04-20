@@ -1,86 +1,93 @@
-'use client'
+"use client";
 
-import { motion } from 'motion/react'
+import { motion } from "motion/react";
 
 type Tier = {
-  n: string
-  name: string
-  unlocks: string
-  controls: string[]
-  note?: string
-}
+  n: string;
+  name: string;
+  unlocks: string;
+  controls: string[];
+  note?: string;
+};
 
 const tiers: Tier[] = [
   {
-    n: '00',
-    name: 'Foundations',
-    unlocks: 'Mid-market & large commercial — most procurement reviews clear here.',
-    controls: ['SOC 2 Type II', 'ISO 27001', 'Evidence automation', 'VPAT / accessibility'],
-    note: 'Table stakes. The goal is not to pass — it’s to pass cheaply and never again.',
+    n: "00",
+    name: "Foundations",
+    unlocks:
+      "Mid-market & large commercial — most procurement reviews clear here.",
+    controls: [
+      "SOC 2 Type II",
+      "ISO 27001",
+      "Evidence automation",
+      "VPAT / accessibility",
+    ],
+    note: "Table stakes. The goal is not to pass — it’s to pass cheaply and never again.",
   },
   {
-    n: '01',
-    name: 'Commercial federal',
-    unlocks: 'Civilian agencies, state & local, heavily regulated commercial.',
+    n: "01",
+    name: "Commercial federal",
+    unlocks: "Civilian agencies, state & local, heavily regulated commercial.",
     controls: [
-      'FedRAMP Moderate',
-      'StateRAMP',
-      'CJIS where relevant',
-      'Customer-held encryption (BYOK/HYOK)',
-      'US-only residency',
+      "FedRAMP Moderate",
+      "StateRAMP",
+      "CJIS where relevant",
+      "Customer-held encryption (BYOK/HYOK)",
+      "US-only residency",
     ],
-    note: 'The first step that actually changes the product. Expect 12–18 months and a dedicated program lead.',
+    note: "The first step that actually changes the product. Expect 12–18 months and a dedicated program lead.",
   },
   {
-    n: '02',
-    name: 'DoD-adjacent',
-    unlocks: 'DoD mission owners, intelligence community primes, defence industrial base.',
+    n: "02",
+    name: "DoD-adjacent",
+    unlocks:
+      "DoD mission owners, intelligence community primes, defence industrial base.",
     controls: [
-      'FedRAMP High',
-      'DoD IL4 · IL5',
-      'CMMC 2.0 L2 / L3',
-      'GovCloud isolation',
-      'Hardware root of trust',
+      "FedRAMP High",
+      "DoD IL4 · IL5",
+      "CMMC 2.0 L2 / L3",
+      "GovCloud isolation",
+      "Hardware root of trust",
     ],
-    note: 'Architecture starts to fork. Worth it if your deal sizes justify a second SKU.',
+    note: "Architecture starts to fork. Worth it if your deal sizes justify a second SKU.",
   },
   {
-    n: '03',
-    name: 'Export-controlled',
-    unlocks: 'Primes, defence R&D, regulated research, the top of the pyramid.',
+    n: "03",
+    name: "Export-controlled",
+    unlocks: "Primes, defence R&D, regulated research, the top of the pyramid.",
     controls: [
-      'ITAR boundary',
-      'EAR / dual-use controls',
-      'Nationality-aware access',
-      'Regional data residency (EU, UK, AUKUS)',
-      'Air-gapped / sovereign options',
+      "ITAR boundary",
+      "EAR / dual-use controls",
+      "Nationality-aware access",
+      "Regional data residency (EU, UK, AUKUS)",
+      "Air-gapped / sovereign options",
     ],
-    note: 'Path-aware access control — not just endpoint checks — is the quiet load-bearing requirement here.',
+    note: "Path-aware access control — not just endpoint checks — is the quiet load-bearing requirement here.",
   },
-]
+];
 
 const insiderControls = [
   {
-    title: 'Privileged access, justified in real time',
-    body: 'Every privileged action — human or agent — gates on a business justification evaluated in under 200ms. Justification and decision are sealed into the audit record.',
+    title: "Privileged access, justified in real time",
+    body: "Every privileged action — human or agent — gates on a business justification evaluated in under 200ms. Justification and decision are sealed into the audit record.",
   },
   {
-    title: 'Path-aware authorization',
-    body: 'Validate every device a request traverses, not just source and destination. The class of control regulators are increasingly asking for, and what my 2024 patent disclosure addresses.',
+    title: "Path-aware authorization",
+    body: "Validate every device a request traverses, not just source and destination. The class of control regulators are increasingly asking for, and what my 2024 patent disclosure addresses.",
   },
   {
-    title: 'Agent identity, audited like human identity',
-    body: 'Treat AI agents as first-class principals: their own identity, their own scoped permissions, their own attributable audit trail. Not a shared service account.',
+    title: "Agent identity, audited like human identity",
+    body: "Treat AI agents as first-class principals: their own identity, their own scoped permissions, their own attributable audit trail. Not a shared service account.",
   },
   {
-    title: 'Break-glass without the glass shattering',
-    body: 'Emergency access that is fast, heavily-audited, time-boxed, and reviewed. A pattern that survives a P0 *and* a post-incident GRC sit-down.',
+    title: "Break-glass without the glass shattering",
+    body: "Emergency access that is fast, heavily-audited, time-boxed, and reviewed. A pattern that survives a P0 *and* a post-incident GRC sit-down.",
   },
   {
-    title: 'Access reviews that aren’t theatre',
-    body: 'Quarterly attestations that actually remove privileges — structured so reviewers can say yes or no without reading a thousand rows.',
+    title: "Access reviews that aren’t theatre",
+    body: "Quarterly attestations that actually remove privileges — structured so reviewers can say yes or no without reading a thousand rows.",
   },
-]
+];
 
 export function EnterpriseRoadmap() {
   return (
@@ -92,9 +99,7 @@ export function EnterpriseRoadmap() {
             <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink-faint">
               §II
             </p>
-            <p className="label-accent label mt-2">
-              Enterprise roadmap
-            </p>
+            <p className="label-accent label mt-2">Enterprise roadmap</p>
           </div>
           <div className="col-span-12 md:col-span-9 lg:col-span-10">
             <h2 className="font-display text-display-lg tracking-tight">
@@ -103,12 +108,12 @@ export function EnterpriseRoadmap() {
               Here’s the roadmap.
             </h2>
             <p className="mt-6 max-w-[62ch] text-ink-muted text-[17px] leading-[1.6]">
-              Most startups find the regulated-enterprise and federal
-              markets opaque — a wall of acronyms sitting between them and
-              ten-figure deal sizes. It isn’t opaque. It’s a staged climb
-              with well-known rungs, and each rung is tractable if you
-              plan for it. Here’s the ladder I help teams map against —
-              and the insider-risk controls that live across every stage.
+              Most startups find the regulated-enterprise and federal markets
+              opaque — a wall of acronyms sitting between them and ten-figure
+              deal sizes. It isn’t opaque. It’s a staged climb with well-known
+              rungs, and each rung is tractable if you plan for it. Here’s the
+              ladder I help teams map against — and the insider-risk controls
+              that live across every stage.
             </p>
           </div>
         </div>
@@ -128,8 +133,12 @@ export function EnterpriseRoadmap() {
                   key={t.n}
                   initial={{ opacity: 0, x: -12 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: '-60px' }}
-                  transition={{ duration: 0.8, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{
+                    duration: 0.8,
+                    delay: i * 0.08,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
                   className="relative pl-[48px] md:pl-[64px] group"
                 >
                   {/* Rung marker */}
@@ -137,8 +146,8 @@ export function EnterpriseRoadmap() {
                     <span
                       className={
                         i === tiers.length - 1
-                          ? 'relative z-10 flex items-center justify-center w-9 h-9 bg-oxblood text-paper-light font-mono text-[11px] tabular'
-                          : 'relative z-10 flex items-center justify-center w-9 h-9 bg-paper-light border border-ink font-mono text-[11px] tabular'
+                          ? "relative z-10 flex items-center justify-center w-9 h-9 bg-oxblood text-paper-light font-mono text-[11px] tabular"
+                          : "relative z-10 flex items-center justify-center w-9 h-9 bg-paper-light border border-ink font-mono text-[11px] tabular"
                       }
                     >
                       {t.n}
@@ -185,7 +194,7 @@ export function EnterpriseRoadmap() {
           <motion.aside
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-60px' }}
+            viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
             className="col-span-12 md:col-span-5 md:sticky md:top-32 self-start"
           >
@@ -195,7 +204,7 @@ export function EnterpriseRoadmap() {
                 className="absolute -top-12 -right-12 w-48 h-48 opacity-10"
                 style={{
                   backgroundImage:
-                    'repeating-linear-gradient(-45deg, transparent 0, transparent 6px, #f2ecdb 6px, #f2ecdb 7px)',
+                    "repeating-linear-gradient(-45deg, transparent 0, transparent 6px, #f2ecdb 6px, #f2ecdb 7px)",
                 }}
               />
 
@@ -204,16 +213,17 @@ export function EnterpriseRoadmap() {
                   Cross-cutting
                 </p>
                 <h3 className="mt-3 font-display text-[32px] leading-[1] tracking-tight">
-                  Insider risk &amp;<br />
+                  Insider risk &amp;
+                  <br />
                   <span className="italic text-oxblood-light">
                     privileged access
                   </span>
                 </h3>
                 <p className="mt-5 text-[14.5px] text-paper/80 leading-[1.65]">
-                  The same set of controls keeps reappearing at every
-                  stage — and it’s the set procurement and internal audit
-                  teams scrutinise most. Get these right once and the
-                  climb is dramatically cheaper.
+                  The same set of controls keeps reappearing at every stage —
+                  and it’s the set procurement and internal audit teams
+                  scrutinise most. Get these right once and the climb is
+                  dramatically cheaper.
                 </p>
 
                 <ol className="mt-7 space-y-5">
@@ -224,7 +234,7 @@ export function EnterpriseRoadmap() {
                     >
                       <div className="flex items-baseline gap-3">
                         <span className="font-mono text-[10.5px] tabular text-oxblood-light">
-                          {String(i + 1).padStart(2, '0')}
+                          {String(i + 1).padStart(2, "0")}
                         </span>
                         <h4 className="font-display italic text-[18px] leading-[1.2] text-paper-light">
                           {c.title}
@@ -254,5 +264,5 @@ export function EnterpriseRoadmap() {
         </div>
       </div>
     </section>
-  )
+  );
 }

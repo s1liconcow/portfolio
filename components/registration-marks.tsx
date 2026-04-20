@@ -1,26 +1,17 @@
 export function RegistrationMarks({
-  inset = 'clamp(12px, 2vw, 24px)',
+  inset = "clamp(12px, 2vw, 24px)",
 }: {
-  inset?: string
+  inset?: string;
 }) {
   return (
     <div aria-hidden className="pointer-events-none">
-      <div
-        className="absolute reg-mark"
-        style={{ top: inset, left: inset }}
-      >
+      <div className="absolute reg-mark" style={{ top: inset, left: inset }}>
         <span />
       </div>
-      <div
-        className="absolute reg-mark"
-        style={{ top: inset, right: inset }}
-      >
+      <div className="absolute reg-mark" style={{ top: inset, right: inset }}>
         <span />
       </div>
-      <div
-        className="absolute reg-mark"
-        style={{ bottom: inset, left: inset }}
-      >
+      <div className="absolute reg-mark" style={{ bottom: inset, left: inset }}>
         <span />
       </div>
       <div
@@ -30,5 +21,5 @@ export function RegistrationMarks({
         <span />
       </div>
     </div>
-  )
+  );
 }

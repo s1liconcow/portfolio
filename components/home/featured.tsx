@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 export function HomeFeatured() {
   return (
@@ -45,5 +45,5 @@ export function HomeFeatured() {
         </blockquote>
       </div>
     </section>
-  )
+  );
 }

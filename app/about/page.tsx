@@ -55,9 +55,12 @@ export default function AboutPage() {
               I spent nearly a decade at Google, including the last five years
               as an SRE “Uber” Tech Lead. My team ran the authorization and
               data-governance systems behind GCP’s Regulated Cloud, as well as
-              the controls that governed privileged access inside Google. It was
-              zero-trust infrastructure at a scale large enough to punish
-              hand-waving. I stepped out in March 2026 to build independently.
+              the controls that governed privileged access inside Google.
+              Running these large scale systems at this sort of unparalleled
+              scale forces you think carefully about reliability even far out on
+              the tail. This was a great opportunity but after nearly a decade
+              it was time to try different things and I recently stepped out to
+              build independently.
             </p>
             <p className="text-[16.5px] leading-[1.65]">
               Along the way I co-wrote the Anthos Service Mesh adoption story

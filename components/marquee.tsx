@@ -1,19 +1,19 @@
-import { cn } from '@/lib/cn'
+import { cn } from "@/lib/cn";
 
 type MarqueeProps = {
-  items: string[]
-  className?: string
-  separator?: string
-  speed?: 'slow' | 'normal' | 'fast'
-}
+  items: string[];
+  className?: string;
+  separator?: string;
+  speed?: "slow" | "normal" | "fast";
+};
 
 export function Marquee({
   items,
   className,
-  separator = '✧',
-  speed = 'normal',
+  separator = "✧",
+  speed = "normal",
 }: MarqueeProps) {
-  const duration = speed === 'slow' ? '70s' : speed === 'fast' ? '35s' : '50s'
+  const duration = speed === "slow" ? "70s" : speed === "fast" ? "35s" : "50s";
   const content = (
     <div
       className="flex shrink-0 items-center gap-8 pr-8"
@@ -31,19 +31,22 @@ export function Marquee({
         </span>
       ))}
     </div>
-  )
+  );
 
   return (
     <div
       className={cn(
-        'no-scrollbar overflow-hidden py-6 border-y border-ink-rule/60',
-        className
+        "no-scrollbar overflow-hidden py-6 border-y border-ink-rule/60",
+        className,
       )}
     >
-      <div className="flex animate-marquee" style={{ animationDuration: duration }}>
+      <div
+        className="flex animate-marquee"
+        style={{ animationDuration: duration }}
+      >
         {content}
         {content}
       </div>
     </div>
-  )
+  );
 }

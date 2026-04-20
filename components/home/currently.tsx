@@ -1,35 +1,35 @@
-import { Reveal } from '@/components/reveal'
+import { Reveal } from "@/components/reveal";
 
 const activities = [
   {
-    icon: '▲',
-    label: 'Building',
-    title: 'Just Auth — AI-powered access governance',
+    icon: "▲",
+    label: "Building",
+    title: "Just Auth — AI-powered access governance",
     detail:
-      'Intercepting privileged data access — human and agent — with real-time business justifications and tamper-proof audit.',
+      "Intercepting privileged data access — human and agent — with real-time business justifications and tamper-proof audit.",
   },
   {
-    icon: '●',
-    label: 'Building',
-    title: 'RepoGauge — evaluating AI coding agents',
+    icon: "●",
+    label: "Building",
+    title: "RepoGauge — evaluating AI coding agents",
     detail:
-      'Mines your repo’s bugfix history into SWE-bench-style tasks and benchmarks coding agents on the code you actually ship.',
+      "Mines your repo’s bugfix history into SWE-bench-style tasks and benchmarks coding agents on the code you actually ship.",
   },
   {
-    icon: '◆',
-    label: 'Building',
-    title: 'ClawFS — a filesystem for AI agents',
+    icon: "◆",
+    label: "Building",
+    title: "ClawFS — a filesystem for AI agents",
     detail:
-      'POSIX-compliant, shared, object-backed. Written in Rust for multi-client agent workloads without the metadata DB overhead.',
+      "POSIX-compliant, shared, object-backed. Written in Rust for multi-client agent workloads without the metadata DB overhead.",
   },
   {
-    icon: '◐',
-    label: 'Writing',
-    title: '“Climbing the Agentic Coding Ladder”',
+    icon: "◐",
+    label: "Writing",
+    title: "“Climbing the Agentic Coding Ladder”",
     detail:
-      'A field essay on where autonomous coding agents earn their keep — and the rungs that aren’t yet stable.',
+      "A field essay on where autonomous coding agents earn their keep — and the rungs that aren’t yet stable.",
   },
-]
+];
 
 export function HomeCurrently() {
   return (
@@ -80,5 +80,5 @@ export function HomeCurrently() {
         </div>
       </Reveal>
     </section>
-  )
+  );
 }

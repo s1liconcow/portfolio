@@ -1,14 +1,14 @@
-'use client'
+"use client";
 
-import { motion, type HTMLMotionProps } from 'motion/react'
-import { type ReactNode } from 'react'
+import { motion, type HTMLMotionProps } from "motion/react";
+import { type ReactNode } from "react";
 
-type RevealProps = HTMLMotionProps<'div'> & {
-  children: ReactNode
-  delay?: number
-  y?: number
-  duration?: number
-}
+type RevealProps = HTMLMotionProps<"div"> & {
+  children: ReactNode;
+  delay?: number;
+  y?: number;
+  duration?: number;
+};
 
 export function Reveal({
   children,
@@ -19,15 +19,15 @@ export function Reveal({
 }: RevealProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y, filter: 'blur(4px)' }}
-      whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-      viewport={{ once: true, margin: '-60px' }}
+      initial={{ opacity: 0, y, filter: "blur(4px)" }}
+      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+      viewport={{ once: true, margin: "-60px" }}
       transition={{ duration, delay, ease: [0.22, 1, 0.36, 1] }}
       {...rest}
     >
       {children}
     </motion.div>
-  )
+  );
 }
 
 export function RevealText({
@@ -35,20 +35,20 @@ export function RevealText({
   delay = 0,
   className,
 }: {
-  children: ReactNode
-  delay?: number
-  className?: string
+  children: ReactNode;
+  delay?: number;
+  className?: string;
 }) {
   return (
     <motion.span
       className={className}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-40px' }}
+      viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 1.0, delay, ease: [0.22, 1, 0.36, 1] }}
-      style={{ display: 'inline-block' }}
+      style={{ display: "inline-block" }}
     >
       {children}
     </motion.span>
-  )
+  );
 }

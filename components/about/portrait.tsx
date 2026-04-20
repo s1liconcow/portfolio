@@ -1,9 +1,9 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import { motion } from 'motion/react'
+import Image from "next/image";
+import { motion } from "motion/react";
 
-import mePortrait from '@/me.png'
+import mePortrait from "@/me.png";
 
 export function Portrait() {
   return (
@@ -21,7 +21,7 @@ export function Portrait() {
       <motion.div
         initial={{ opacity: 0, scale: 0.985, y: 18 }}
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
-        viewport={{ once: true, margin: '-60px' }}
+        viewport={{ once: true, margin: "-60px" }}
         transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
         className="absolute inset-0 overflow-hidden border border-ink-rule bg-paper-light shadow-[10px_10px_0_0_rgba(206,196,172,0.7)]"
       >
@@ -45,7 +45,7 @@ export function Portrait() {
             className="absolute inset-0"
             style={{
               backgroundImage:
-                'linear-gradient(to right, transparent calc(50% - .5px), rgba(185,176,154,0.22) calc(50% - .5px), rgba(185,176,154,0.22) calc(50% + .5px), transparent calc(50% + .5px)), linear-gradient(to bottom, transparent calc(50% - .5px), rgba(185,176,154,0.16) calc(50% - .5px), rgba(185,176,154,0.16) calc(50% + .5px), transparent calc(50% + .5px))',
+                "linear-gradient(to right, transparent calc(50% - .5px), rgba(185,176,154,0.22) calc(50% - .5px), rgba(185,176,154,0.22) calc(50% + .5px), transparent calc(50% + .5px)), linear-gradient(to bottom, transparent calc(50% - .5px), rgba(185,176,154,0.16) calc(50% - .5px), rgba(185,176,154,0.16) calc(50% + .5px), transparent calc(50% + .5px))",
             }}
           />
 
@@ -55,5 +55,5 @@ export function Portrait() {
         </div>
       </motion.div>
     </div>
-  )
+  );
 }
